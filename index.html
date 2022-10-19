@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encuesta</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rufina&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="pollMain" id="pollMain">
+      <div id="informationUser" class="informationUser">
+        <p>Bienvenido, <span id="fullname" class="fullname"></span></p>
+        <p onclick="appExit()">Salir</p>
+      </div>
+
+      <div class="welcome" id="welcome">
+        <h1 class="quiz__maintitle">Bienvenido a la encuesta</h1>
+        <h4>Para iniciar, por favor necesitamos saber tu nombre</h4>
+        <input type="text" id="username" class="username" />
+        <p class="pollInstructions">
+          Tendrás una pequeña encuesta de
+          <span id="pollTotal" class="pollTotal"></span> preguntas
+        </p>
+        <button
+          id="startPoll"
+          class="startPoll"
+          onclick="startPoll(document.getElementById('username').value)"
+        >
+          Iniciar
+        </button>
+      </div>
+
+      <div class="poll" id="poll">
+        <div id="question" class="question"></div>
+        <ul id="option" class="option"></ul>
+      </div>
+      <div class="results" id="results">
+        <div id="titleResult" class="titleResult"></div>
+
+        <div id="checkanswers" class="checkanswers"></div>
+        <div id="lastUsername" class="lastUsername"></div>
+        <ul id="resultList"></ul>
+      </div>
+      <div>
+        <id id="counterNumber">
+          <span id="first"></span><span id="second"></span>
+        </id>
+      </div>
+      <!-- The Modal -->
+      <div id="jsModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2 id="modal-title">Modal Header</h2>
+          </div>
+          <div class="modal-body">
+            <p id="modal-boddy"></p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="poll.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
